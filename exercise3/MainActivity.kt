@@ -20,10 +20,9 @@ class MainActivity : AppCompatActivity() {
             val btnLogin = findViewById<Button>(R.id.btnLogin)
             val edtUsername = findViewById<EditText>(R.id.edtUsername)
             val edtPassword = findViewById<EditText>(R.id.edtPassword)
-            val correctEmail = "blixdforyasen@gmail.com"
             val correctPassword = "1234567890"
             btnLogin.setOnClickListener{
-                if(edtUsername.text.toString().equals(correctEmail) && edtPassword.text.toString().equals(correctPassword)){
+                if(edtPassword.text.toString().equals(correctPassword)){
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomePage::class.java)
                     intent.putExtra("loggedUsername", edtUsername.text.toString())
